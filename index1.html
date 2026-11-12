@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - [Votre Nom]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-bg-text">PORTFOLIO</div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="greeting">Hello, I'm</div>
+                <h1>[PRINCIA <br> SESENARISOA]</h1>
+                <h2>Web Designer & UI/UX Creator</h2>
+                <p>Je conçois et développe des sites web stylés et centrés sur l'utilisateur, alliant créativité et stratégie. Passionné(e) par le design épuré et les animations fluides.</p>
+                
+            </div>
+            
+            <div class="hero-image">
+                <!-- Remplacez 'votre-image.jpg' par le nom de votre fichier image -->
+                <img src="../assets/images/Portrait détouré sur fond transparent.png" alt="Portrait de [Votre Nom]">
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>2+</h3>
+                    <p>Années<br>d'expérience</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>Projets<br>réalisés</p>
+                </div>
+                <div class="stat-item">
+                    <h3>8+</h3>
+                    <p>Clients<br>satisfaits</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PROJETS -->
+    <section class="container">
+        <div class="section-title">
+            <span>Projets Sélectionnés</span>
+            <span style="font-size: 0.8rem; color: var(--accent-color); cursor: pointer;">Voir tout &rarr;</span>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img-placeholder">Image du Projet 1</div>
+                <div class="project-info">
+                    <h3>Projet Alpha</h3>
+                    <p>Site E-commerce</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img-placeholder">Image du Projet 2</div>
+                <div class="project-info">
+                    <h3>Projet Beta</h3>
+                    <p>Design d'Interface</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img-placeholder">Image du Projet 3</div>
+                <div class="project-info">
+                    <h3>Projet Gamma</h3>
+                    <p>Application Web</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION COMPETENCES -->
+    <section class="container skills-process">
+        <div class="skills">
+            <h3>Éducation & Compétences</h3>
+            <div class="skills-list">
+                <span class="skill-tag">Web Design</span>
+                <span class="skill-tag">UI/UX Design</span>
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Photoshop</span>
+                <span class="skill-tag">Webflow</span>
+            </div>
+        </div>
+
+        <div class="process">
+            <h3>Mon Processus</h3>
+            <div class="process-step">
+                <div class="process-num">01</div>
+                <div class="process-text">
+                    <h4>Découverte</h4>
+                    <p>Comprendre les objectifs et les besoins.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="process-num">02</div>
+                <div class="process-text">
+                    <h4>Design</h4>
+                    <p>Création visuelle avec focus utilisateur.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="process-num">03</div>
+                <div class="process-text">
+                    <h4>Développement</h4>
+                    <p>Intégration rapide et performante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer class="container footer">
+        <div class="footer-left">
+            <h2>LET'S WORK<br><span>TOGETHER</span></h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Actuellement ouvert(e) aux nouveaux projets.</p>
+            
+            <div class="footer-contact">
+                <p>&#9993; contact@votrenom.com</p>
+                <p>&#128241; +33 6 12 34 56 78</p>
+                <p>&#128205; Paris, France</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT JS -->
+    <script>
+        // Un petit effet de machine à écrire pour le texte "Hello, I'm"
+        document.addEventListener("DOMContentLoaded", () => {
+            const greeting = document.querySelector('.greeting');
+            const text = greeting.innerText;
+            greeting.innerText = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < text.length) {
+                    greeting.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+            setTimeout(typeWriter, 500);
+        });
+    </script>
+</body>
+</html>
